@@ -1,6 +1,6 @@
-Using Tesseract, you can convert any kind of photographed newspaper article into plain digitized text.
+Using Tesseract, you can digitize any kind of image containing printed text.
 
-You can do this very fast using a smartphone, or a low dpi scanner or camera with a lower resolution.
+You can do this very fast a low dpi scanner or camera with a lower resolution.
 
 Your computer will use lots of RAM for the conversion process into a black white image anyway.
 
@@ -35,7 +35,7 @@ You can run this script on multiple images using this command.
 
 for i in sample/*.jpg;do ./myocr.sh $i result/$(basename $i .jpg) -l [language of your choice];done
 
-In my system [Debian 9], the one of the following languages are supported - using a short brev:
+In my system [Debian 9], the one of the following languages are supported by a short brev:
 
 afr,all,amh,ara,asm,aze,aze-cyrl,bel,ben,bod,bos,bul,cat,ceb,ces,chi-sim,chi-tra,chr,cym,dan,dan-frak,deu,deu-frak,dzo,ell,enm,epo,est,eus,fas,fin,fra,frk,frm,gle,gle-uncial,glg,grc,guj,hat,heb,hin,hrv,hun,iku,ind,isl,ita,ita-old,jav,jpn,kan,kat,kat-old,kaz,khm,kir,kor,kur,lao,lat,lav,lit,mal,mar,mkd,mlt,msa,mya,nep,nld,nor,ori,pan,pol,por,pus,ron,rus,san,sin,slk,slk-frak,slv,spa,spa-old,sqi,srp,srp-latn,swa,swe,syr,tam,tel,tgk,tgl,tha,tir,tur,uig,ukr,urd,uzb,uzb-cyrl,vie,yid
  
