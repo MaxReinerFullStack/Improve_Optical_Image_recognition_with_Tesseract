@@ -39,4 +39,7 @@ In my system [Debian 9], the one of the following languages are supported by a s
 
 afr,all,amh,ara,asm,aze,aze-cyrl,bel,ben,bod,bos,bul,cat,ceb,ces,chi-sim,chi-tra,chr,cym,dan,dan-frak,deu,deu-frak,dzo,ell,enm,epo,est,eus,fas,fin,fra,frk,frm,gle,gle-uncial,glg,grc,guj,hat,heb,hin,hrv,hun,iku,ind,isl,ita,ita-old,jav,jpn,kan,kat,kat-old,kaz,khm,kir,kor,kur,lao,lat,lav,lit,mal,mar,mkd,mlt,msa,mya,nep,nld,nor,ori,pan,pol,por,pus,ron,rus,san,sin,slk,slk-frak,slv,spa,spa-old,sqi,srp,srp-latn,swa,swe,syr,tam,tel,tgk,tgl,tha,tir,tur,uig,ukr,urd,uzb,uzb-cyrl,vie,yid
  
- 
+To use this version of the script, please download the textcleaner script and put it in directory /usr/sbin.
+http://www.fmwconcepts.com/imagemagick/textcleaner/index.php
+
+
