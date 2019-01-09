@@ -33,7 +33,7 @@ https://stackoverflow.com/questions/13974645/using-tesseract-from-java
 
 You can run this script on multiple images using this command.
 
-for i in sample/*.jpg;do ./myocr.sh $i result/$(basename $i .jpg) -l [language of your choice];done
+for i in sample/*.jpg;do ./myocr.sh $i result/$(basename $i .jpg) [language of your choice];done
 
 In my system [Debian 9], the one of the following languages are supported by a short brev:
 
