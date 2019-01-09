@@ -1,7 +1,14 @@
 #!/bin/bash
 # PROGRAM=myocr.sh
 if [ $# -ge 3 ]; then
-  TMPF=$(mktemp myocr.sh.XXXXXXXX.tif)
+    if [[ ! -e temp_result ]];
+    then
+      mkdir -p temp_result
+    fi
+  mkdir temp_result
+  TMPF=$(mktemp temp_result/myocr.sh.XXXXXXXX.png)
+  TMPF2=$(mktemp temp_result/myocr.sh.XXXXXXXXX.png)
+  TMPF3=$(mktemp temp_result/myocr.sh.XXXXXXXXXX.png)
   DEST="$2"
   LANG="$3"
   if [ ! "$DEST" ]; then
@@ -11,8 +18,9 @@ if [ $# -ge 3 ]; then
       exit 1
     fi
   fi
-  /usr/bin/convert "$1" -colorspace Gray -depth 8 -resample 200x200 -flatten -alpha Off $TMPF \
-  && /usr/bin/tesseract $TMPF "$DEST" -l="$LANG"
+   /usr/bin/convert "$1" -density 288 $TMPF
+   /usr/sbin/textcleaner -g -e stretch -f 50 -o 10 -s 1 $TMPF $TMPF2
+   /usr/bin/tesseract $TMPF2 "$DEST" -l="$LANG"
   EX=$?
   /bin/rm -f $TMPF
   [ $EX -eq 0 ] && [ "$TERM" ] && echo "created $DEST"
